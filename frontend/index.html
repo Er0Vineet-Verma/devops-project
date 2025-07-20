@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify-Style DevOps Dashboard</title>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar container flex items-center justify-between py-16">
+    <h1 class="logo" style="font-weight:600;font-size:24px">
+      DevOps Dashboard
+    </h1>
+    <nav>
+      <ul class="flex gap-16" style="list-style:none;margin:0;padding:0">
+        <li><a href="#overview" class="nav-link">Overview</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#stack" class="nav-link">Tech Stack</a></li>
+        <li><a href="#deployment" class="nav-link">Deployment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main-content">
+    <!-- Overview Section -->
+    <section id="overview" class="section reveal visible">
+      <h2>Project Overview</h2>
+      <p>
+        Welcome to the Spotify-style DevOps Dashboard project. This single-page application demonstrates a modern CI/CD pipeline using Docker, Minikube, and VS Code Dev Containers.<br>
+        Scroll through to see how each technology fits into the workflow.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section reveal visible">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li class="feature-item visible"><strong>Containerised Development:</strong> Leverage Docker Compose & Dev Containers for reproducible environments.</li>
+        <li class="feature-item visible"><strong>Kubernetes-ready:</strong> Local clusters powered by Minikube mirror production setups.</li>
+        <li class="feature-item visible"><strong>GitHub Actions CI:</strong> Automated testing & image publishing on every pull request.</li>
+        <li class="feature-item visible"><strong>Helm Charts:</strong> Declarative application packaging for effortless releases.</li>
+      </ul>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="section reveal visible">
+      <h2>Technology Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-card card visible">
+          <div class="card__body">
+            <h3>Frontend</h3>
+            <p>HTML 5, CSS 3 (Spotify-inspired) &amp; Vanilla JS.</p>
+          </div>
+        </div>
+        <div class="tech-card card visible">
+          <div class="card__body">
+            <h3>Containerisation</h3>
+            <p>Dockerfile &amp; Docker Compose for local builds.</p>
+          </div>
+        </div>
+        <div class="tech-card card visible">
+          <div class="card__body">
+            <h3>Orchestration</h3>
+            <p>Minikube + Helm for local Kubernetes clusters.</p>
+          </div>
+        </div>
+        <div class="tech-card card visible">
+          <div class="card__body">
+            <h3>CI/CD</h3>
+            <p>GitHub Actions workflows for automated testing &amp; deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deployment Section -->
+    <section id="deployment" class="section reveal visible">
+      <h2>Local Deployment Guide</h2>
+      <ol class="deployment-steps">
+        <li class="deployment-step visible"><strong>Clone the repo:</strong>
+          <code>git clone https://github.com/your-org/spotify-devops-dashboard.git</code>
+        </li>
+        <li class="deployment-step visible"><strong>Build the image:</strong>
+          <code>docker compose build</code>
+        </li>
+        <li class="deployment-step visible"><strong>Run locally:</strong>
+          <code>docker compose up</code>
+        </li>
+        <li class="deployment-step visible"><strong>Spin up Minikube:</strong>
+          <code>minikube start</code>
+        </li>
+        <li class="deployment-step visible"><strong>Install via Helm:</strong>
+          <code>helm install dashboard ./charts/dashboard</code>
+        </li>
+      </ol>
+      <p>
+        Once deployed, access the dashboard at <code>http://localhost:3000</code> and enjoy monitoring in true Spotify style!
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container flex flex-col gap-8 items-center py-16">
+      <p class="m-0">Designed & Developed by <strong>Vineet Verma</strong></p>
+      <div class="footer__links flex gap-16">
+        <a href="mailto:vineet04verma@gmail.com" class="footer-link" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+917018943453" class="footer-link" title="Phone"><i class="fas fa-phone"></i></a>
+        <a href="https://www.linkedin.com/in/vineet-verma-" class="footer-link" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Er0Vineet-Verma" class="footer-link" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
